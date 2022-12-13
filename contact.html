@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <!-- Roboto fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+   <link rel="stylesheet" href="src/styles/style.css">
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   <script src="/script.js" type="module"></script>
+
+  </head>
+  <body id="flex_body">
+    <div id="app">
+    <header id="main-header">
+
+        <section id="headerBar">
+            <nav id="nav-top">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="hobbies.html">Hobbies</a></li>
+                  <li><a href="resume.html">Resume</a></li>
+                  <li><a href="works.html">Works</a></li>
+                </ul> 
+              </nav>
+              
+        </section>
+        <section id="waves"></section>
+  </header>
+    <main id="contact-main">
+      <section>
+        <h1>Contact</h1>
+      </section>
+      <section id="contact-img">
+        <img id="phone_img" src="src/images/connect_img.png" alt="older phone" @click="toggleContact">
+        <div class="contentWrap">
+          <p v-if="contact">
+            My Phone number is 617-308-7979
+          </p>
+          <p v-else> </p>
+          <p v-if="email">
+            My email address is lazpz61@gmail.com
+          </p>
+          <p v-else> </p>
+         
+      </div>
+
+      </section>
+
+        <section id="contact-list">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/laz_lifting_life/" target="_blank"> <i class="fab fa-instagram-square"></i> Instagram</a>
+            </li>
+            <li>
+              
+              <a href="https://www.facebook.com/lazarolp/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            </li>
+            <li>
+              
+              <a href="https://github.com/lazpz61" target="_blank"> <i class="fab fa-github"></i> Github</a>
+            </li>
+            <li>
+              
+              <a href="https://twitter.com/lazpz61" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            </li>
+          </ul>
+      </section>
+    </main>
+    <footer>&copy; Lazaro Perez 2022 &#124; All rights reserved;</footer>
+  </div>
+  </body>
+
+</html>

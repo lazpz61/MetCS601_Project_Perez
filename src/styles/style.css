@@ -1,0 +1,506 @@
+:root {
+    --primaryAzure: #f0ffff;
+    --orangeTint:  #FFD37C;
+    --organeDark: #A66F2E;
+    --lightRed: #FF8E7C;
+    --lightGreen: #00c03a;
+    --lightYellow: #fafa5e;
+    --textShadow: 0px 3px 0px #b2a98f,
+    0px 14px 10px rgba(0,0,0,0.15),
+    0px 24px 2px rgba(0,0,0,0.1),
+    0px 34px 30px rgba(250, 174, 86, 0.849);
+    --textShadowMQ:  4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+
+
+
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;    
+    background-color: var(--primaryAzure);
+    overflow:scroll; 
+    min-height: 100vh;
+    /* width: 100%; */
+}
+#flex_body_about {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 100vh; */
+}
+#flex_body {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 100vh; */
+}
+
+/* Styling the Header Bar for the waves aspect */
+
+#main-header{
+    position: relative;
+    background: var(--orangeTint);
+    color: var(--organeDark);
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    overflow: hidden;
+}
+#main-hobbyHeader{
+    position: relative;
+    background: var(--orangeTint);
+    color: var(--organeDark);
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    overflow: hidden;
+}
+
+#waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-color: var(--primaryAzure);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: 10ms;
+}
+
+#waves::before, #waves::after {
+    content: '';
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    top: -65vw;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+#waves::before {
+    border-radius: 44%;
+    background: var(--organeDark);
+    animation: waves 8s linear infinite;
+}
+
+#waves::after {
+    border-radius: 44%;
+    background: var(--orangeTint);
+    animation: waves 15s linear infinite;
+}
+@keyframes waves {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }
+
+
+/* Styling the Home Page sepcifics */
+
+/* Styling the Nav Bard and the top Header of page */
+/* #main-header img{
+    width: 216px;
+    height: 100%;
+    margin-left: 50px;
+} */
+
+h1, h2{
+    color:var(--orangeTint);
+    text-shadow: var(--textShadow);
+}
+p{
+    color:var(--organeDark);
+    text-align-last: center;
+}
+
+
+
+
+#nav-top ul{
+    list-style:none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+ 
+    z-index: 1;
+}
+#nav-top_hobbies ul{
+    list-style:none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+#nav-top ul li{
+    position: relative;
+    z-index: 1;
+    margin: 20px;
+    width: 70px;
+    text-align: center;
+}
+
+
+#nav-top ul li a{
+    color: var(--organeDark);
+    transition: 0.5s;
+}
+
+#nav-top ul li a:link{
+    text-decoration: none;
+}
+
+#nav-top ul li a:hover{
+    color: var(--lightGreen);
+    font-weight:700;
+    letter-spacing: 1px;
+}
+
+
+#nav_side  ul{
+    list-style: none;
+    float:right;
+    margin-right:-200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#nav_side ul li {
+ text-align: center; 
+}
+#nav_side  ul li a{
+    color: var(--organeDark);
+    transition: 0.5s;
+}
+#nav_side  ul li a:link{
+    text-decoration: none;
+}
+#nav_side  ul li a:hover{
+    color: var(--lightGreen);
+    font-weight:700;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+/* For the Welcome image in the middle of screen */
+#home-img {
+    display: flex;
+    justify-content: center;
+    margin-top:-80px;
+}
+/* Style Section 1 Home Page */
+
+#mainHobby {   
+    align-items: center;
+}
+main, #home-section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+
+main #index-sec2  i {
+    color: var(--lightRed);
+}
+
+/* Stylign the contact page */
+
+/* This will set up the seesaw effect with the contact image */
+
+ #phone_img{
+    width:360px;
+    height:360px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: animate 2s linear infinite;
+    cursor: pointer;
+}
+.contentWrap {
+    height:120px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    25% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+    
+}
+#contact-list ul {
+    list-style:none;
+    margin-bottom: 50px;
+}
+
+#contact-list ul li a{
+    color: var(--organeDark);
+}
+
+#contact-list li a:link{
+    text-decoration: none;
+    
+}
+#contact-list ul li a:hover{
+    color: var(--lightGreen);
+    font-weight:700;
+}
+
+.fa-instagram-square{
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.fa-facebook {
+    color:#3b5998;
+    filter:brightness(100%);
+
+}
+
+.fa-github{
+    color:black;
+}
+.fa-twitter {
+    color:#00acee;
+    filter:saturate(100%);
+}
+
+/* Styles for the about Page */
+.gym_img {
+    width:360px;
+    height:360px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#dancing{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#pTagDancing {
+    width: 150px;
+}
+
+.hobbyWrapper {
+    width:1000px;
+}
+.hobbyWrapper > .hobbys > .hobbySection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: -4px;
+}
+#hobby-headers {
+    display:block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: var(--textShadow);
+
+} 
+#dancing p, #music p    {
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.hobbySection{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.hobbySection > .carouselSection {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+}
+
+
+
+.image-container {
+    display: flex;
+    transition: transform 1.50s ease-in-out;
+    transform: translateX(10);
+}
+.hobbySection > .carouselSection >.image-container > img {
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+}
+
+#hobbyDescription {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hobbyDescription > p {
+width:300px;
+}
+
+
+
+#resumeMain {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#resumePdf {
+    width: 1000px;
+}
+
+#worksheading {
+    display: flex;
+    justify-content: center;
+}
+#worksWrapper1, #worksWrapper2 {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+
+#worksportion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+/* Styling the Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    opacity:0.5;
+}
+
+
+@media only screen and (max-width: 920px){
+    #flex_body, #flex_body_about {
+        height:100%;
+    }
+
+    #main-header{
+        overflow: visible;
+        width: 100%;
+    }
+    #main-hobbyHeader{
+        overflow: visible;
+        width: 688px;
+    }
+    #waves {
+        height:80px;
+        overflow:hidden;
+    }
+
+    #nav-top ul {
+        display: block;
+    }
+
+    #nav-top ul li {
+        margin: 0px;
+    }
+    h1, h2, #hobby-headers {
+        text-shadow: var(--textShadowMQ);
+    }
+    #dancing, #music {
+        display:flex; 
+        flex-direction: column;
+    }
+    p{
+        color: rgba(143, 168, 0, 0.966);
+    }
+    #pTagDancing {
+        width: 150px;
+        margin-left: 60px;
+    }
+    
+    #pTagMusic {
+        width: 159px;
+        margin-left: 60px;
+    }
+    main, #home-section1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    table{
+        width:auto;
+    }
+    #resumePdf {
+        width: 600px;
+    }
+    
+    #worksWrapper1, #worksWrapper2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #worksWrapper1 > #worksportion > a > img {
+        width: 300px;
+    }
+    #worksWrapper2 > #worksportion > a > img {
+        width: 300px;
+    }    
+
+    .hobbyWrapper > .hobbys > .hobbySection {
+        display: flex;
+        flex-direction: column;
+        margin-top: -4px;
+        justify-content: center;
+        align-items: center;
+    }
+    /* .hobbySection > .carouselSection > .image-container >img {
+
+    } */
+}
+
+
